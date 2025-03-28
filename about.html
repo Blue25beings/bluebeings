@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Beings - About</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="ocean-vibe.css">
+    <style>
+    :root {
+        --primary: #1a374d;
+        --secondary: #406882;
+        --accent: #a2d2ff;
+        --neutral: #f0e5c6;
+        --enable: true;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--neutral);
+    color: var(--primary);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    perspective: 1000;
+    overflow-x: hidden;
+    min-width: 320px;
+}
+
+
+.about-section {
+    background: linear-gradient(135deg, rgba(64, 104, 131, 0.8), rgba(64, 104, 131, 0.8)), url('about bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #dcbfbf;
+    -webkit-text-stroke: .3px #000;
+    text-stroke: .2=px #000;
+    padding: clamp(120px, 40vw, 180px) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(10px, 3vw, 20px);
+    position: relative;
+    z-index: 2;
+}
+
+.ocean-wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(50px, 10vw, 100px);
+    background: url('wave.svg') repeat-x;
+    animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+/* Navigation and Search */   
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem clamp(2%, 5%, 8%);
+    background: rgba(26, 55, 77, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 2px solid var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--neutral);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    padding: 0.5rem clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    letter-spacing: 0.5px;
+}
+
+.nav-links a[href="index.html"]:before {
+    content: '🏡';
+    margin-right: 5px;
+}
+
+.nav-links a[href="about.html"]:before {
+    content: '💡';
+}
+
+.nav-links a[href="#team"]:before {
+    content: '👥';
+}
+
+.nav-links a[href="#contact"]:before {
+    content: '📞';
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-box {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--neutral);
+    width: clamp(150px, 20vw, 200px);
+    transition: all 0.3s;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+.search-box:focus {
+    width: clamp(200px, 25vw, 250px);
+    outline: none;
+    box-shadow: 0 0 10px rgba(162, 210, 255, 0.3);
+}
+
+.search {
+    position: relative;
+    margin: 0 clamp(0.5rem, 1vw, 1rem);
+}
+
+.search input {
+    padding: 0.8rem 3rem 0.8rem 1.5rem;
+    border: 2px solid var(--accent);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--neutral);
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    width: clamp(45px, 5vw, 45px);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-align: center;
+}
+
+.search input:focus,
+.search:hover input {
+    width: clamp(200px, 30vw, 300px);
+    background: rgba(162, 210, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(162, 210, 255, 0.3);
+}
+
+.search input::placeholder {
+    color: var(--neutral);
+    opacity: 0.7;
+    text-align: center;
+}
+
+.search button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search button::before {
+    content: "🔍";
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+.search button:hover {
+    color: var(--neutral);
+    transform: translateY(-50%) scale(1.1) rotate(90deg);
+}
+
+.navbar {
+    background-color: var(--primary);
+    padding: 1rem clamp(2%, 5%, 8%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 800;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    height: clamp(800px, 3, 118px);
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.navbar .logo {
+    color: var(--accent);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bold;
+}
+
+/* Home Section Enhancement */
+.wave-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(50px, 10vh, 100px);
+    animation: wave 20s linear infinite;
+}
+
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 800;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+blockquote {
+    border-left: 5px solid #00ccff;
+    padding: 20px;
+    margin: 30px 0;
+    background: rgba(0,0,0,0.2);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 40px;
+    color: #00ccff;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.ocean-particles {
+    background: linear-gradient(rgba(26, 55, 77, 0.8), rgba(64, 104, 130, 0.8)), url('ocean-waves.jpg');
+    background-size: cover;
+    height: clamp(10vh, 80vh, 120vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--neutral);
+    position: fixed;
+    top: 60px;
+    bottom: 80vh;
+    left: 0px;
+    right: 0px;
+    z-index: -4;
+}
+    </style>
+</head>
+<body>
+  <div class="refresh-indicator"></div>
+  <nav class="navbar">
+    <div
+      class="logo"
+      style="font-family: papyrus"
+      onclick="location.href='index.html';"
+    >
+      Blue Beings
+    </div>
+    <div class="nav-links">
+      <a
+        href="index.html"
+        >Home</a>
+      <a href="about.html">About</a>
+      <a href="our team.html">Our Team</a>
+      <div class="dropdown">
+        <a href="#contact" class="dropbtn">Contact Us</a>
+        <div class="dropdown-content">
+          <a href="https://wa.link/bt408i" class="animated-link" onclick="animateMailClick(event)" target="_blank">WhatsApp 📱</a>
+          <script>
+            function animateMailClick(e) {
+              const link = e.target;
+              link.classList.add('clicked');
+              
+              // Create ripple effect
+              const ripple = document.createElement('span');
+              ripple.classList.add('ripple');
+              link.appendChild(ripple);
+              
+              const rect = link.getBoundingClientRect();
+              const size = Math.max(rect.width, rect.height) * 2;
+              
+              ripple.style.width = ripple.style.height = `${size}px`;
+              ripple.style.left = `${e.clientX - rect.left - size/2}px`;
+              ripple.style.top = `${e.clientY - rect.top - size/2}px`;
+              
+              setTimeout(() => {
+                link.classList.remove('clicked');
+                ripple.remove();
+              }, 750);
+            }
+          </script>
+          <style>
+            .animated-link {
+              transition: transform 0.3s ease, color 0.3s ease;
+              position: relative;
+              overflow: hidden;
+            }
+            .animated-link.clicked {
+              animation: pulse 0.5s ease;
+              color: #00ccff;
+              box-shadow: 0 0 8px rgba(0, 204, 255, 0.6);
+            }
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.2); }
+              100% { transform: scale(1); }
+            }
+            .ripple {
+              position: absolute;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255, 0.4);
+              transform: scale(0);
+              animation: ripple-animation 0.75s ease-out;
+              pointer-events: none;
+            }
+            @keyframes ripple-animation {
+              to {
+                transform: scale(1);
+                opacity: 0;
+              }
+            }
+          </style>
+          <a href="#telegram">Telegram ✈️</a>
+          <a href="mailto:bluebeings4@gmail.com" class="animated-link" onclick="animateMailClick(event)" target="_blank">Mail 📧</a>
+          <script>
+            function animateMailClick(e) {
+              const link = e.target;
+              link.classList.add('clicked');
+              setTimeout(() => {
+                link.classList.remove('clicked');
+              }, 500);
+            }
+          </script>
+          <style>
+            .animated-link {
+              transition: transform 0.3s ease, color 0.3s ease;
+            }
+            .animated-link.clicked {
+              animation: pulse 0.5s ease;
+              color: #00ccff;
+            }
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.2); }
+              100% { transform: scale(1); }
+            }
+          </style>
+          <a href="#linkedin"> LinkedIn 💼</a>
+          <a href="https://www.instagram.com/blue.beings?utm_source=qr&igsh=b21tY3BxcGhlbXQw" class="animated-link" onclick="animateMailClick(event)" target="_blank">Instagram 📸</a>
+          <script>
+            function animateMailClick(e) {
+              const link = e.target;
+              link.classList.add('clicked');
+              setTimeout(() => {
+                link.classList.remove('clicked');
+              }, 500);
+            }
+          </script>
+          <style>
+            .animated-link {
+              transition: transform 0.3s ease, color 0.3s ease;
+            }
+            .animated-link.clicked {
+              animation: pulse 0.5s ease;
+              color: #00ccff;
+            }
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.2); }
+              100% { transform: scale(1); }
+            }
+          </style>
+          <a href="https://www.facebook.com/profile.php?id=61574696283495&ref=ig_profile_ac"  class="animated-link" onclick="animateMailClick(event) " target="_blank">Facebook 📘</a>
+          <script>
+            function animateMailClick(e) {
+              const link = e.target;
+              link.classList.add('clicked');
+              setTimeout(() => {
+                link.classList.remove('clicked');
+              }, 500);
+            }
+          </script>
+          <style>
+            .animated-link {
+              transition: transform 0.3s ease, color 0.3s ease;
+            }
+            .animated-link.clicked {
+              animation: pulse 0.5s ease;
+              color: #00ccff;
+            }
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.2); }
+              100% { transform: scale(1); }
+            }
+          </style>
+            <a href="https://x.com/BeingsBlue?t=v_sKvrdT4zfeW63faWszsg&s=08" class="animated-link" onclick="animateMailClick(event)" target="_blank">Twitter 🐦</a>
+          <script>
+            function animateMailClick(e) {
+              const link = e.target;
+              link.classList.add('clicked');
+              setTimeout(() => {
+                link.classList.remove('clicked');
+              }, 500);
+            }
+          </script>
+          <style>
+            .animated-link {
+              transition: transform 0.3s ease, color 0.3s ease;
+            }
+            .animated-link.clicked {
+              animation: pulse 0.5s ease;
+              color: #00ccff;
+            }
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.2); }
+              100% { transform: scale(1); }
+            }
+          </style>
+          <a href="https://www.threads.net/@blue.beings" class="animated-link" onclick="animateMailClick(event)" target="_blank">Thread 🧵</a>
+                    <script>
+            function animateMailClick(e) {
+              const link = e.target;
+              link.classList.add('clicked');
+              setTimeout(() => {
+                link.classList.remove('clicked');
+              }, 500);
+            }
+          </script>
+          <style>
+            .animated-link {
+              transition: transform 0.3s ease, color 0.3s ease;
+            }
+            .animated-link.clicked {
+              animation: pulse 0.5s ease;
+              color: #00ccff;
+            }
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.2); }
+              100% { transform: scale(1); }
+            }
+          </style>
+          <a href="https://www.pinterest.com/settings/edit-profile" class="animated-link" onclick="animateMailClick(event)" target="_blank">Pinterest 📌</a>
+          <a href="https://www.youtube.com/channel/UCAMZyyR7AY9-Uc-APcZy-kw" class="animated-link" onclick="animateMailClick(event)" target="_blank">YouTube 📹</a>
+        </div>
+      </div>
+      <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: var(--primary);
+          min-width: 200px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+          border-radius: 5px;
+          z-index: 1;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .dropdown-content a {
+          color: var(--neutral);
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+          transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: var(--secondary);
+          transform: translateX(5px);
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+      <div class="search">
+        <input type="text" placeholder="Search..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </nav>
+
+    <section id="about" class="about-section">
+        <div class="ocean-particles"></div>
+        <div class="about-content">
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 3.5rem; margin-bottom: 1.5rem; background: linear-gradient(to right, #a2d2ff, #00ccff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 2px 4px 8px rgba(0,0,0,0.2);">Blue Beings: Where Ideas Take Flight</h2>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 1.4rem; line-height: 1.8; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                Welcome to <strong style="color: #00ccff; font-size: 1.5rem;">Blue Beings</strong>, a tech-driven creative agency where your ideas gain wings through precision and imagination. Our team of passionate techies offers a range of services, from custom portfolios, content creation, and AI-powered graphics to website design, brand consultancy, and strategic storytelling.
+            </p>
+            <p style="font-family: 'Quicksand', sans-serif; font-size: 1.4rem; line-height: 1.8; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                In a universe vast and unknown, where ideas flicker like distant stars, <strong style="color: #00ccff; font-size: 1.5rem;">Blue Beings emerges—a force of creation, innovation, and limitless possibilities</strong>. We are not just designers; we are architects of digital realms, crafting brand identities, business cards, social media visuals, and immersive experiences that leave a lasting impact.
+            </p>
+            <blockquote style="border-left: 5px solid #00ccff; padding: 1.5rem; background: rgba(162, 210, 255, 0.1); margin: 2.5rem 0; border-radius: 0 10px 10px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <p style="font-size: 1.8rem; font-style: italic; color: #f0e5c6; text-align: center; font-family: 'Playfair Display', serif;">"Do or do not. There is no try." – Yoda, <em>Star Wars</em></p>
+            </blockquote>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; line-height: 1.8; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                Your brand is more than a logo—it's a story waiting to be told. We shape identities, sculpt narratives, and turn visions into reality. Whether you seek a striking website, an AI-enhanced design, or a branding strategy that sets you apart, we're here to bring your vision to life.
+            </p>
+            <h3 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: #00ccff; margin-top: 2rem; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); animation: float 3s ease-in-out infinite;">Blue Beings—giving your ideas wings in a universe without limits. 🚀</h3>
+        </div>
+        <div class="ocean-wave"></div>
+        
+    </section>
+</body>
+</html>

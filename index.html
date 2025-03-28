@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="ocean vibe.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Being - A Creative Life Of Unknown</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="logo.png" as="image">
+    <link rel="preload" href="wave.svg" as="image">
+  </head>
+  <body>
+    <div class="refresh-indicator"></div>
+    <nav class="navbar">
+      <div
+        class="logo"
+        style="font-family: papyrus"
+        onclick="location.href='index.html';">
+        Blue Beings
+      </div>
+      <div class="nav-links">
+        <a
+          href="index.html"
+          onclick="event.preventDefault(); smoothScroll('.hero')">Home</a>
+        <a href="about.html">About</a>
+        <a href="our team.html">Our Team</a>
+        <div class="dropdown">
+          <a href="#contact" class="dropbtn">Contact Us</a>
+          <div class="dropdown-content">
+            <a href="https://wa.link/bt408i" class="animated-link"
+              onclick="animateMailClick(event)" target="_blank">WhatsApp 📱</a>
+            <a href="#telegram">Telegram ✈️</a>
+            <a href="mailto:bluebeings4@gmail.com" class="animated-link"
+              onclick="animateMailClick(event)" target="_blank">Mail 📧</a>
+            <a href="#linkedin"> LinkedIn 💼</a>
+            <a
+              href="https://www.instagram.com/blue.beings?utm_source=qr&igsh=b21tY3BxcGhlbXQw"
+              class="animated-link" onclick="animateMailClick(event)"
+              target="_blank">Instagram 📸</a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61574696283495&ref=ig_profile_ac"
+              class="animated-link" onclick="animateMailClick(event) "
+              target="_blank">Facebook 📘</a>
+            <a href="https://x.com/BeingsBlue?t=v_sKvrdT4zfeW63faWszsg&s=08"
+              class="animated-link" onclick="animateMailClick(event)"
+              target="_blank">Twitter 🐦</a>
+            <a href="https://www.threads.net/@blue.beings" class="animated-link"
+              onclick="animateMailClick(event)" target="_blank">Thread 🧵</a>
+            <a href="https://www.pinterest.com/settings/edit-profile"
+              class="animated-link" onclick="animateMailClick(event)"
+              target="_blank">Pinterest 📌</a>
+            <a href="https://www.youtube.com/channel/UCAMZyyR7AY9-Uc-APcZy-kw"
+              class="animated-link" onclick="animateMailClick(event)"
+              target="_blank">YouTube 📹</a>
+          </div>
+        </div>
+        <style>
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--primary);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+          }
+          
+          .dropdown-content a {
+            color: var(--neutral);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s ease;
+          }
+          
+          .dropdown-content a:hover {
+            background-color: var(--secondary);
+            transform: translateX(5px);
+          }
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        </style>
+        <div class="search">
+          <input type="text" placeholder="Search..." />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero"
+      style="position: relative; overflow: hidden; text-align: center; color: var(--neutral);">
+      <div
+        style="position: relative; z-index: 2; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="max-width: 180px; margin-bottom: 1.5rem;">
+          <img src="logo.png" alt="Blue Being Logo"
+            style="width: 100%; height: auto; filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));">
+        </div>
+
+        <div style="text-align: center; max-width: 800px;">
+          <h1
+            style="font-family: 'Times New Roman', sans-serif; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+            Welcome to Blue Beings
+          </h1>
+          <p style="font-family: serif; font-size: 1.5rem; margin: 1rem 0;">
+            A creative life of Unknown
+          </p>
+          <p
+            style="font-family: Montserrat; font-size: 1.2rem; line-height: 1.6;">
+            Blue Beings offers creative services like custom portfolios, content
+            creation, brand kits, website design, AI-driven graphics, and brand
+            consultancy. From logos to business cards, social media visuals to
+            branding strategies, we bring your ideas to life with precision and
+            creativity. Let's build your unique identity together!
+          </p>
+          <a href="services.html"
+            style="
+          display: inline-block;
+          margin-top: 2rem;
+          padding: 1.2rem 2.5rem;
+          background: linear-gradient(45deg, var(--accent), #4a90e2);
+          color: var(--primary);
+          border-radius: 30px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          box-shadow: 0 5px 15px rgba(0, 204, 255, 0.4);
+          position: relative;
+          overflow: hidden;
+          animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+          z-index: 1;
+          will-change: transform;
+        "
+            onclick="event.preventDefault(); window.location.href='services.html';">
+            <span style="
+              position: relative;
+              z-index: 2;
+              transition: all 0.6s ease;
+            ">"Together, let's turn your Imagination  into reality."</span>
+            <div style="
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+              animation: shimmer 2s infinite;
+              z-index: 1;
+              will-change: transform;
+            "></div>
+          </a>
+          <style>
+            @keyframes float {
+              0%, 100% { transform: translateY(0); }
+              50% { transform: translateY(-10px); }
+            }
+            @keyframes glow {
+              0%, 100% { box-shadow: 0 5px 15px rgba(0, 204, 255, 0.4); }
+              50% { box-shadow: 0 5px 25px rgba(0, 204, 255, 0.7); }
+            }
+            @keyframes shimmer {
+              0% { left: -100%; }
+              100% { left: 100%; }
+            }
+          </style>
+          <style>
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(0,204,255,0.6); }
+              100% { transform: scale(1); }
+            }
+          </style>
+        </div>
+      </div>
+
+      <div class="wave-animation"
+        style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: url('wave.svg'); animation: wave 20s linear infinite; z-index: 0; will-change: transform;"></div>
+    </section>
+
+    <section class="services" style="font-family: 'Orbitron', sans-serif;">
+      <div class="service-card">
+        <h3
+          style="font-family: 'Rajdhani', sans-serif; font-weight: 700; color: #00ccff; font-size: 1.8rem; text-transform: uppercase;">Website
+          Design</h3>
+        <p
+          style="font-family: 'Exo 2', sans-serif; font-size: 1.1rem; line-height: 1.6;">•
+          Custom website design tailored to your brand<br>• Responsive &
+          mobile-friendly websites</p>
+      </div>
+      <div class="service-card">
+        <h3
+          style="font-family: 'Rajdhani', sans-serif; font-weight: 700; color: #00ccff; font-size: 1.8rem; text-transform: uppercase;">Logo
+          Design & Branding</h3>
+        <p
+          style="font-family: 'Exo 2', sans-serif; font-size: 1.1rem; line-height: 1.6;">•
+          Unique and professional logo creation<br>• Business cards<br>•
+          Social media branding & templates<br>• Personal branding<br>• Business
+          branding<br>• Brand management<br>• Portfolio</p>
+      </div>
+      <div class="service-card">
+        <h3
+          style="font-family: 'Rajdhani', sans-serif; font-weight: 700; color: #00ccff; font-size: 1.8rem; text-transform: uppercase;">Graphic
+          Design Services</h3>
+        <p
+          style="font-family: 'Exo 2', sans-serif; font-size: 1.1rem; line-height: 1.6;">•
+          Brochures, flyers, and posters<br>• Wedding cards<br>• Data-driven
+          infographics<br>• Presentations<br>• AI-driven image generation<br>•
+          Photo enhancement<br>• Doodles</p>
+      </div>
+      <div class="service-card">
+        <h3
+          style="font-family: 'Rajdhani', sans-serif; font-weight: 700; color: #00ccff; font-size: 1.8rem; text-transform: uppercase;">Video
+          Editing & Social Media</h3>
+        <p
+          style="font-family: 'Exo 2', sans-serif; font-size: 1.1rem; line-height: 1.6;">•
+          Professional video editing for promotions, ads & social media<br>•
+          Faceless explainer videos<br>• YouTube video editing &
+          intros/outros<br>• Voice-over for videos<br>• Ads for
+          products/channel<br>• Event-specific content</p>
+      </div>
+      <div class="service-card">
+        <h3
+          style="font-family: 'Rajdhani', sans-serif; font-weight: 700; color: #00ccff; font-size: 1.8rem; text-transform: uppercase;">Wedding
+          & Event Content</h3>
+        <p
+          style="font-family: 'Exo 2', sans-serif; font-size: 1.1rem; line-height: 1.6;">•
+          Wedding videos<br>• Save the date videos/posts<br>• Menu card
+          design</p>
+      </div>
+      <div class="service-card">
+        <h3
+          style="font-family: 'Rajdhani', sans-serif; font-weight: 700; color: #00ccff; font-size: 1.8rem; text-transform: uppercase;">Social
+          Media & Content Creation</h3>
+        <p
+          style="font-family: 'Exo 2', sans-serif; font-size: 1.1rem; line-height: 1.6;">•
+          Content writing<br>• Thumbnail, cover page<br>• Social media
+          handle</p>
+      </div>
+      <style>
+        .services h3 {
+          letter-spacing: 2px;
+          text-shadow: 0 0 10px rgba(0,204,255,0.5);
+          margin-bottom: 15px;
+          background: linear-gradient(90deg, #00ccff, #0091ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          position: relative;
+        }
+        .services h3::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 60px;
+          height: 2px;
+          background: linear-gradient(90deg, #00ccff, transparent);
+        }
+        .services p {
+          font-weight: 500;
+          letter-spacing: 0.7px;
+          color: rgba(255,255,255,0.9);
+          text-shadow: 0 0 5px rgba(0,204,255,0.3);
+        }
+        .service-card {
+          background: rgba(26, 55, 77, 0.8);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(0, 204, 255, 0.3);
+          border-radius: 10px;
+          padding: 25px;
+          transition: all 0.3s ease;
+          box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
+          will-change: transform, box-shadow;
+        }
+        .service-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 0 25px rgba(0, 204, 255, 0.4);
+          border-color: rgba(0, 204, 255, 0.6);
+        }
+        .service-card:hover h3 {
+          text-shadow: 0 0 15px rgba(0,204,255,0.8);
+        }
+      </style>
+    </section>
+    <section class="founders">
+      <h2 class="wave-text animated-title">Meet Our Founders</h2>
+      <style>
+        .animated-title {
+          font-family: 'Poppins', sans-serif;
+          background: linear-gradient(45deg, #00ccff, #0091ff, #00ccff);
+          background-size: 200% 200%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: gradientFlow 3s ease infinite, titleFloat 4s ease-in-out infinite;
+          text-shadow: 0 0 15px rgba(0, 204, 255, 0.5);
+          letter-spacing: 2px;
+        }
+        
+        @keyframes gradientFlow {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes titleFloat {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+      </style>
+      <div class="ocean-divider">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+      </div>
+      
+      <div class="founder-container">
+        <div class="founder-profile" id="sharma-profile">
+          <div class="profile-image-container">
+            <img src="sharma.png" alt="Mr. Sharma" class="profile-image">
+            <div class="image-bubbles"></div>
+          </div>
+          <div class="profile-content">
+            <h3 class="glow-text">Mr. Sharma</h3>
+            <div class="title-badge">Founder, Blue Beings</div>
+            <div class="skills-container">
+              <span class="skill-badge">Web Dev</span>
+              <span class="skill-badge">Content Writing</span>
+              <span class="skill-badge">Design</span>
+              <span class="skill-badge">Content Creation</span>
+            </div>
+            <p class="bio-text">
+              Meet Sharma, the visionary founder of Bluebeings and a trailblazing
+              BCA student who exceeds expectations. With expertise in web
+              development, programming, and content creation, he delivers
+              innovative digital solutions. Sharma's impressive skillset includes
+              AI/ML, graphic design, and content writing. Adept in
+              industry-leading tools like Canva, Photoshop, Corel, CapCut,
+              Premiere Pro, and Lightroom, he crafts stunning visuals. A natural
+              leader, he excels in teamwork, problem-solving, and time management.
+              And, as a testament to his skills, this very website was proudly
+              created by him!
+            </p>
+            <div class="tools-showcase">
+              <div class="tool-icon" data-tool="Photoshop">🎨</div>
+              <div class="tool-icon" data-tool="Premiere">🎬</div>
+              <div class="tool-icon" data-tool="Canva">📱</div>
+              <div class="tool-icon" data-tool="Lightroom">📷</div>
+              <div class="tool-icon" data-tool="CapCut">✂️</div>
+              <div class="tool-icon" data-tool="Corel">🎭</div>
+            </div>
+            <style>
+              .profile-content {
+                padding: clamp(1rem, 3vw, 2rem);
+                max-width: 100%;
+              }
+              
+              .glow-text {
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+                margin-bottom: clamp(0.5rem, 2vw, 1rem);
+              }
+              
+              .title-badge {
+                font-size: clamp(0.9rem, 2vw, 1.2rem);
+                margin-bottom: clamp(0.5rem, 2vw, 1rem);
+              }
+              
+              .skills-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: clamp(0.3rem, 1vw, 0.8rem);
+                margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
+              }
+              
+              .skill-badge {
+                font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+                padding: clamp(0.2rem, 0.8vw, 0.5rem) clamp(0.5rem, 1.2vw, 1rem);
+              }
+              
+              .bio-text {
+                font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+                line-height: clamp(1.4, 1.6vw, 1.8);
+                margin-bottom: clamp(1rem, 2vw, 1.5rem);
+              }
+              
+              .tools-showcase {
+                display: flex;
+                flex-wrap: wrap;
+                gap: clamp(0.5rem, 2vw, 1rem);
+                justify-content: flex-start;
+              }
+              
+              .tool-icon {
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+                padding: clamp(0.3rem, 1vw, 0.6rem);
+              }
+              
+              @media (max-width: 768px) {
+                .profile-content {
+                  text-align: center;
+                }
+                
+                .skills-container, .tools-showcase {
+                  justify-content: center;
+                }
+              }
+            </style>
+          </div>
+        </div>
+        <div class="founder-profile" id="keshrii-profile">
+          <div class="profile-content">
+            <h3 class="glow-text">Ms. Keshri</h3>
+            <div class="title-badge">Co-founder, Blue Beings</div>
+            <div class="skills-container">
+              <span class="skill-badge">Art</span>
+              <span class="skill-badge">Design</span>
+              <span class="skill-badge">Storytelling</span>
+              <span class="skill-badge">Doodling</span>
+              <span class="skill-badge">Content Creation</span>
+            </div>
+            <p class="bio-text">
+              Keshri is a visionary Computer Science student who seamlessly weaves
+              together her love of art and technology. With a creative mindset and
+              an eye for detail, she finds inspiration in the harmony between
+              logical code and the beauty of the natural world. Beyond her
+              academic pursuits, Keshri is a passionate storyteller and innovator,
+              constantly seeking new ways to merge technology, artistry, and human
+              connection. Through her work in programming, design, and narrative,
+              she aims to create immersive experiences that inspire and captivate
+              others.
+            </p>
+            <div class="creative-indicator">
+              <div class="code-art">
+
+              </div>
+            </div>
+          </div>
+          <div class="profile-image-container">
+            <img src="keshrii.jpg" alt="Miss. Keshrii" class="profile-image">
+            <div class="image-bubbles"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="privacy-notice">
+        <p>Note: The identities of the founders have been partially obscured due to privacy concerns following a recent privacy breach. We appreciate your understanding.</p>
+      </div>
+      
+      <style>
+        .founders {
+          padding: 5rem 0;
+          background: linear-gradient(180deg, rgba(26, 55, 77, 0.9), rgba(12, 30, 45, 0.95));
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .wave-text {
+          font-size: 3rem;
+          text-align: center;
+          margin-bottom: 2rem;
+          background: linear-gradient(90deg, #00ccff, #0091ff, #00ccff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: wave-animation 8s linear infinite;
+          background-size: 200% auto;
+        }
+        
+        @keyframes wave-animation {
+          0% { background-position: 0% center; }
+          100% { background-position: 200% center; }
+        }
+        
+        .ocean-divider {
+          height: 60px;
+          position: relative;
+          margin-bottom: 3rem;
+        }
+        
+        .wave {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-repeat: repeat-x;
+          background-position: 0 bottom;
+          transform-origin: center bottom;
+        }
+        
+        .wave1 {
+          background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%230091ff"/></svg>');
+          animation: wave-slide 12s linear infinite;
+          z-index: 2;
+        }
+        
+        .wave2 {
+          background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".5" fill="%2300ccff"/></svg>');
+          animation: wave-slide 18s linear infinite;
+          z-index: 1;
+        }
+        
+        @keyframes wave-slide {
+          0% { background-position-x: 0; }
+          100% { background-position-x: 1200px; }
+        }
+        
+        .founder-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+        
+        .founder-profile {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5rem;
+          background: rgba(26, 55, 77, 0.6);
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          padding: 2rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(0, 204, 255, 0.3);
+          position: relative;
+          overflow: hidden;
+          transition: all 0.5s ease;
+        }
+        
+        .founder-profile:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 40px rgba(0, 204, 255, 0.4);
+          border-color: rgba(0, 204, 255, 0.6);
+        }
+        
+        #keshrii-profile {
+          flex-direction: row-reverse;
+        }
+        
+        .profile-image-container {
+          flex: 0 0 300px;
+          position: relative;
+          margin: 0 2rem;
+        }
+        
+        .profile-image {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 3px solid #00ccff;
+          box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+          transition: all 0.3s ease;
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15px); }
+        }
+        
+        .image-bubbles {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          pointer-events: none;
+        }
+        
+        .image-bubbles::before,
+        .image-bubbles::after {
+          content: '';
+          position: absolute;
+          background: rgba(0, 204, 255, 0.3);
+          border-radius: 50%;
+          animation: bubble-float 4s ease-in-out infinite;
+        }
+        
+        .image-bubbles::before {
+          width: 30px;
+          height: 30px;
+          top: 20%;
+          left: -15px;
+          animation-delay: 0s;
+        }
+        
+        .image-bubbles::after {
+          width: 20px;
+          height: 20px;
+          bottom: 30%;
+          right: -10px;
+          animation-delay: 2s;
+        }
+        
+        @keyframes bubble-float {
+          0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+          50% { transform: translateY(-20px) scale(1.2); opacity: 0.3; }
+        }
+        
+        .profile-content {
+          flex: 1;
+        }
+        
+        .glow-text {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+          background: linear-gradient(90deg, #00ccff, #0091ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+          position: relative;
+          display: inline-block;
+        }
+        
+        .glow-text::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, #00ccff, transparent);
+          animation: width-pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes width-pulse {
+          0%, 100% { width: 60%; opacity: 0.7; }
+          50% { width: 100%; opacity: 1; }
+        }
+        
+        .title-badge {
+          display: inline-block;
+          background: linear-gradient(90deg, #0091ff, #00ccff);
+          color: white;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+        }
+        
+        .skills-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+        }
+        
+        .skill-badge {
+          background: rgba(0, 204, 255, 0.2);
+          border: 1px solid rgba(0, 204, 255, 0.5);
+          color: white;
+          padding: 0.3rem 0.8rem;
+          border-radius: 15px;
+          font-size: 0.8rem;
+          transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+          background: rgba(0, 204, 255, 0.4);
+          transform: translateY(-3px);
+          box-shadow: 0 3px 10px rgba(0, 204, 255, 0.3);
+        }
+        
+        .bio-text {
+          color: rgba(255, 255, 255, 0.9);
+          line-height: 1.7;
+          margin-bottom: 1.5rem;
+          text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .tools-showcase {
+          display: flex;
+          gap: 1rem;
+        }
+        
+        .tool-icon {
+          width: 40px;
+          height: 40px;
+          background: rgba(0, 204, 255, 0.2);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          position: relative;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .tool-icon:hover {
+          background: rgba(0, 204, 255, 0.4);
+          transform: translateY(-5px) rotate(10deg);
+        }
+        
+        .tool-icon::after {
+          content: attr(data-tool);
+          position: absolute;
+          bottom: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          padding: 0.2rem 0.5rem;
+          border-radius: 5px;
+          font-size: 0.7rem;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+          white-space: nowrap;
+        }
+        
+        .tool-icon:hover::after {
+          opacity: 1;
+        }
+        
+        .creative-indicator {
+          display: flex;
+          justify-content: flex-end;
+        }
+        
+        .code-art {
+          display: flex;
+          gap: 0.3rem;
+          font-family: monospace;
+          color: rgba(0, 204, 255, 0.8);
+          animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .privacy-notice {
+          text-align: center;
+          margin-top: -2rem;
+          margin-bottom: 3rem;
+          padding: 1rem;
+          background: rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          border: 1px solid rgba(0, 204, 255, 0.2);
+          color: rgba(255, 255, 255, 0.8);
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        .privacy-notice p {
+          font-style: italic;
+          text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        @keyframes pulse {
+          0%, 100% { opacity: 0.7; }
+          50% { opacity: 1; }
+        }
+        
+        @media (max-width: 992px) {
+          .founder-profile, #keshrii-profile {
+            flex-direction: column;
+            text-align: center;
+          }
+          
+          .profile-image-container {
+            margin: 0 auto 2rem;
+          }
+          
+          .glow-text::after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          .skills-container {
+            justify-content: center;
+          }
+          
+          .tools-showcase, .creative-indicator {
+            justify-content: center;
+          }
+        }
+      </style>
+      
+      <script>
+        // Create floating bubbles for founder profiles
+        function createFounderBubble(container) {
+          const bubble = document.createElement('div');
+          bubble.className = 'founder-bubble';
+          bubble.style.left = Math.random() * 100 + '%';
+          bubble.style.animationDuration = Math.random() * 4 + 3 + 's';
+          bubble.style.width = bubble.style.height = Math.random() * 20 + 10 + 'px';
+          container.appendChild(bubble);
+          
+          setTimeout(() => bubble.remove(), 7000);
+        }
+        
+        const bubbleContainers = document.querySelectorAll('.image-bubbles');
+        bubbleContainers.forEach(container => {
+          setInterval(() => createFounderBubble(container), 1000);
+        });
+      </script>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Make Waves?</h2>
+      <p>Let's create something amazing together</p>
+      <a href="#services"
+        class="cta-button"
+        onclick="event.preventDefault(); smoothScroll('.services'); animateScroll();">Get
+        Started</a>
+      <script>
+        // Consolidated animation functions
+        const animationFunctions = {
+          // Improved smooth scrolling function with IntersectionObserver
+          smoothScroll: function(target) {
+            const element = document.querySelector(target);
+            if (!element) return;
+            
+            const headerOffset = 80; // Adjust based on your header height
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          },
+          
+          // Throttle function to limit function calls
+          throttle: function(func, limit) {
+            let lastFunc;
+            let lastRan;
+            return function() {
+              const context = this;
+              const args = arguments;
+              if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+              } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                  if ((Date.now() - lastRan) >= limit) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                  }
+                }, limit - (Date.now() - lastRan));
+              }
+            };
+          },
+          
+          // Debounce function to prevent multiple rapid calls
+          debounce: function(func, wait) {
+            let timeout;
+            return function() {
+              const context = this;
+              const args = arguments;
+              clearTimeout(timeout);
+              timeout = setTimeout(() => func.apply(context, args), wait);
+            };
+          },
+          
+          // Optimized animation for scroll button
+          animateScroll: function() {
+            const button = document.querySelector('.cta-button');
+            if (!button) return;
+            
+            button.classList.add('animate-click');
+            
+            setTimeout(() => {
+              button.classList.remove('animate-click');
+            }, 1000);
+            
+            // Create floating particles during scroll - reduced for performance
+            this.createParticles(5);
+            
+            // Add wave effect to services section when scrolled to
+            setTimeout(() => {
+              const services = document.querySelector('.services');
+              if (!services) return;
+              
+              services.classList.add('highlight-section');
+              
+              // Add entrance animation for service cards - using requestAnimationFrame
+              const serviceCards = document.querySelectorAll('.service-card');
+              if (serviceCards.length === 0) return;
+              
+              // Use a more efficient way to animate cards
+              this.animateCards(serviceCards);
+              
+              setTimeout(() => {
+                services.classList.remove('highlight-section');
+              }, 1500);
+            }, 600);
+          },
+          
+          // Optimized card animation with requestAnimationFrame
+          animateCards: function(cards) {
+            // Only animate visible cards for better performance
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  requestAnimationFrame(() => {
+                    entry.target.classList.add('card-entrance');
+                    setTimeout(() => {
+                      entry.target.classList.remove('card-entrance');
+                    }, 1000);
+                  });
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => observer.observe(card));
+          },
+          
+          // Create particles with reduced DOM operations
+          createParticles: function(count = 5) {
+            // Check if we're on mobile - don't create particles on mobile
+            if (window.innerWidth <= 768) return;
+            
+            const container = document.body;
+            const fragment = document.createDocumentFragment();
+            
+            for (let i = 0; i < count; i++) {
+              const particle = document.createElement('div');
+              particle.className = 'scroll-particle';
+              
+              // Random position, size and color
+              particle.style.left = Math.random() * 100 + 'vw';
+              particle.style.top = Math.random() * 100 + 'vh';
+              const size = Math.random() * 6 + 3; // Smaller particles
+              particle.style.width = size + 'px';
+              particle.style.height = size + 'px';
+              
+              const hue = 180 + Math.random() * 40; // Blue-ish colors
+              particle.style.backgroundColor = `hsla(${hue}, 100%, 70%, ${Math.random() * 0.3 + 0.1})`;
+              
+              fragment.appendChild(particle);
+              
+              // Use setTimeout with cleanup
+              setTimeout(() => {
+                if (particle.parentNode) {
+                  particle.parentNode.removeChild(particle);
+                }
+              }, 2000);
+            }
+            
+            container.appendChild(fragment);
+          }
+        };
+        
+        // Assign functions to window scope
+        window.smoothScroll = animationFunctions.smoothScroll;
+        window.animateScroll = function() {
+          animationFunctions.animateScroll.call(animationFunctions);
+        };
+        
+        // Initialize performance optimizations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+          // Use passive event listeners for touch and wheel events
+          document.addEventListener('touchstart', function() {}, {passive: true});
+          document.addEventListener('touchmove', function() {}, {passive: true});
+          document.addEventListener('wheel', function() {}, {passive: true});
+          
+          // Throttle scroll event handlers
+          const throttledScroll = animationFunctions.throttle(function() {
+            // Your scroll event handling code here
+          }, 100);
+          
+          window.addEventListener('scroll', throttledScroll, {passive: true});
+          
+          // Lazy load images that are not immediately visible
+          if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const img = entry.target;
+                  const src = img.getAttribute('data-src');
+                  if (src) {
+                    img.src = src;
+                    img.removeAttribute('data-src');
+                  }
+                  imageObserver.unobserve(img);
+                }
+              });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+              imageObserver.observe(img);
+            });
+          }
+          
+          // Optimize animations by reducing them on low-end devices
+          const isLowEndDevice = () => {
+            return navigator.hardwareConcurrency <= 2 || 
+                  navigator.deviceMemory <= 2 || 
+                  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          };
+          
+          if (isLowEndDevice()) {
+            document.body.classList.add('reduce-animations');
+          }
+        });
+      </script>
+      <style>
+        .cta-button.animate-click {
+          animation: pulse-expand 1s ease-out;
+          will-change: transform, box-shadow;
+        }
+        
+        @keyframes pulse-expand {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.1); box-shadow: 0 10px 25px rgba(0, 204, 255, 0.8); }
+          100% { transform: scale(1); }
+        }
+        
+        .highlight-section {
+          animation: wave-highlight 1.5s ease-out;
+          will-change: transform, box-shadow;
+        }
+        
+        @keyframes wave-highlight {
+          0% { box-shadow: 0 0 0 rgba(0, 204, 255, 0); transform: translateY(0); }
+          25% { box-shadow: 0 0 30px rgba(0, 204, 255, 0.6); transform: translateY(-10px); }
+          50% { box-shadow: 0 0 20px rgba(0, 204, 255, 0.4); transform: translateY(5px); }
+          75% { box-shadow: 0 0 10px rgba(0, 204, 255, 0.2); transform: translateY(-3px); }
+          100% { box-shadow: 0 0 0 rgba(0, 204, 255, 0); transform: translateY(0); }
+        }
+        
+        .card-entrance {
+          animation: card-pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+          will-change: transform, opacity;
+        }
+        
+        @keyframes card-pop {
+          0% { transform: scale(0.8) translateY(20px); opacity: 0; }
+          60% { transform: scale(1.05) translateY(-10px); opacity: 1; }
+          100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        
+        .scroll-particle {
+          position: fixed;
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 9999;
+          animation: float-up 2s ease-out forwards;
+          will-change: transform, opacity;
+        }
+        
+        @keyframes float-up {
+          0% { transform: translateY(0) scale(0); opacity: 0; }
+          20% { transform: translateY(-20vh) scale(1); opacity: 1; }
+          100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+        }
+        
+        /* Optimize rendering performance */
+        body {
+          overscroll-behavior: contain; /* Prevents bounce effects on some browsers */
+        }
+        
+        /* Optimize for mobile devices */
+        @media (max-width: 768px) {
+          .scroll-particle {
+            display: none; /* Disable particles on mobile for better performance */
+          }
+          
+          .reduce-animations * {
+            animation-duration: 0.001s !important;
+            transition-duration: 0.001s !important;
+          }
+        }
+        
+        /* Add content-visibility for better rendering performance */
+        .services, .founders, .cta {
+          content-visibility: auto;
+          contain-intrinsic-size: 1px 1000px;
+        }
+        
+        /* Use hardware acceleration for animations */
+        .animated-link, .service-card, .cta-button {
+          transform: translateZ(0);
+        }
+      </style>
+
+      <footer class="site-footer">
+        <div class="footer-left">
+          <div class="footer-logo" style="font-family: papyrus"
+            onclick="event.preventDefault(); smoothScroll('.hero')">
+            <span class="logo-text"
+              style="font-family: 'papyrus', serif; color: #006699; font-size: 1.2rem; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); animation: float-to-top 0.8s ease-out;">Blue
+              Beings</span>
+            <div class="logo-wave"></div>
+          </div>
+        </div>
+
+        <div class="footer-center">
+          <p class="since-text" style="font-size: 0.9rem;">Since 2025 ™</p>
+        </div>
+
+        <div class="footer-right">
+          <a href="www.linkedin.com/in/blue-beings-8b1a83358"
+            class="linkedin-link" target="_blank">
+            <span class="linkedin-icon">in</span>
+            <span class="linkedin-text">LinkedIn</span>
+          </a>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
